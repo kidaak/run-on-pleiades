@@ -2,7 +2,7 @@
 ########################################################################
 ## Copyright (C) 2010 Jean-Baptiste Carré (speredenn)
 ##                   <jean-baptiste.carre@gadz.org>
-## Time-stamp: <2010-08-02 11:36:07 (speredenn)>
+## Time-stamp: <2010-08-03 22:19:48 (speredenn)>
 ##
 ## Description: This script creates a specific folder for each simulation
 ##              launched. It copies the simulation files in it, start the
@@ -116,8 +116,9 @@ PLEIADES_COMMAND="qsub -l nodes=$NODES_NB:ppn=$PROC_NB,walltime=$TIME $QSUB_TMP"
 
 # Send of the command to Pleiades
 $PLEIADES_COMMAND >> $SIMULATIONS_PATH/$BASE_NAME/$CURRENT_JOB.$HOSTNAME
-JOB_LINE=`cat $SIMULATIONS_PATH/$BASE_NAME/$CURRENT_JOB.$HOSTNAME | tail -1`
-CURRENT_JOB=`echo $JOB_LINE | cut -d '.' -f 1` 
+JOB_LINE=`cat $SIMULATIONS_PATH/$BASE_NAME/$RANDOM_ID.$HOSTNAME | tail -1`
+CURRENT_JOB=`echo $JOB_LINE | cut -d '.' -f 1`
+mv $SIMULATIONS_PATH/$BASE_NAME/$RANDOM_ID.$HOSTNAME $SIMULATIONS_PATH/$BASE_NAME/$CURRENT_JOB.$HOSTNAME
 #########################################################################
 
 # Format the output in the terminal
