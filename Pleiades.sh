@@ -2,7 +2,7 @@
 ########################################################################
 ## Copyright (C) 2010-2011 Jean-Baptiste Carré (carre)
 ##                   <jean-baptiste.carre@gadz.org>
-## Time-stamp: <2011-09-08 20:45:11 (carre)>
+## Time-stamp: <2011-09-08 20:52:51 (carre)>
 ##
 ## Description: This script set has been created to simplify the users
 ## workflow with Pleiades, the Engineering Sciences Faculty
@@ -12,6 +12,12 @@
 ## collects the result files. When the simulation is finished, a mail
 ## is sent to the user (the email needs to be configured in the
 ## script) and the simulation files are archived.
+## 
+## NB: Only MATLAB script are recognized for now, but that can easily
+## be customized in the code (Pleiades.sh, lines 126-136).
+## 
+## USAGE: bash ~/Scripts/Pleiades.sh <main_simulation_file> nodes:<nb>
+##        proc:<nb(1-4)> time:HH:MM:SS
 ##
 ## Keywords: Pleiades; launch simulation; format results; save files
 ##
@@ -27,9 +33,6 @@
 ## http://www.gnu.org/licenses/gpl-3.0.txt
 ########################################################################
 ## Code:
-
-# Example: bash ~/Scripts/Pleiades.sh ~/Test/test.m nodes:1 proc:4 time:00:05:00
-
 
 ########################################################################
 # Configuration section
