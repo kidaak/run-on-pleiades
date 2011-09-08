@@ -1,24 +1,23 @@
 #!/bin/bash
 ########################################################################
-## Copyright (C) 2010-2011 Jean-Baptiste Carré (speredenn)
+## Copyright (C) 2010-2011 Jean-Baptiste Carré (carre)
 ##                   <jean-baptiste.carre@gadz.org>
-## Time-stamp: <2011-09-08 18:40:22 (speredenn)>
+## Time-stamp: <2011-09-08 20:39:55 (carre)>
 ##
-## Description: This script creates a specific folder for each simulation
-##              launched. It copies the simulation files in it, start the
-##              simulation on Pleiades, according to the chosen
-##              parameters, and collect the result files. The only files
-##              it can not collect are the qsub.e and qsub.o files, as
-##              they are created after the end of the job. So, in order
-##              to complete the job started by this script, one should
-##              launch the script "Pleiades-archive_simulations.sh"
-##              before exploiting the results.
+## Description: This script set has been created to simplify the work
+## with Pleiades, the Engineering Science Faculty SuperComputer. The
+## Pleiades script creates a specific folder for each simulation
+## launched. It copies the simulation files, starts the simulation on
+## Pleiades, according to the chosen parameters, and collects the
+## result files. When the simulation is finished, a mail is sent to
+## the user (the email needs to be configured in the script).
+##
 ## Keywords: Pleiades; launch simulation; format results; save files
+##
 ## Commentary: Pleiades is the name of one of the EPFL super-computers
-##             used for heavy computational operations.
-##             <http://pleiades.epfl.ch/>
-##             NOTE: the QSUB_TMP trick belongs to R. Bolliger, from
-##                   LENI <http://people.epfl.ch/raffaele.bolliger>.
+## used for heavy computational operations.
+## <http://pleiades.epfl.ch/> NOTE: the QSUB_TMP trick belongs to
+## R. Bolliger, from LENI <http://people.epfl.ch/raffaele.bolliger>.
 ##
 ########################################################################
 ## This file is free software licensed under the terms of the

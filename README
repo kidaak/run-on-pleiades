@@ -1,2 +1,9 @@
-Pleiades Scripts...
-TODO: Add documentation here
+Description:
+
+This script set has been created to simplify the work with Pleiades,
+the Engineering Science Faculty SuperComputer. The Pleiades script
+creates a specific folder for each simulation launched. It copies the
+simulation files, starts the simulation on Pleiades, according to the
+chosen parameters, and collects the result files. When the simulation
+is finished, a mail is sent to the user (the email needs to be
+configured in the script).
