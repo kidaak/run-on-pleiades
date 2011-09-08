@@ -2,15 +2,16 @@
 ########################################################################
 ## Copyright (C) 2010-2011 Jean-Baptiste Carré (carre)
 ##                   <jean-baptiste.carre@gadz.org>
-## Time-stamp: <2011-09-08 20:39:55 (carre)>
+## Time-stamp: <2011-09-08 20:45:11 (carre)>
 ##
-## Description: This script set has been created to simplify the work
-## with Pleiades, the Engineering Science Faculty SuperComputer. The
-## Pleiades script creates a specific folder for each simulation
-## launched. It copies the simulation files, starts the simulation on
-## Pleiades, according to the chosen parameters, and collects the
-## result files. When the simulation is finished, a mail is sent to
-## the user (the email needs to be configured in the script).
+## Description: This script set has been created to simplify the users
+## workflow with Pleiades, the Engineering Sciences Faculty
+## SuperComputer. The Pleiades script creates a specific folder for
+## each computations launched. It copies the simulation files, starts
+## the simulation on Pleiades, according to the chosen parameters, and
+## collects the result files. When the simulation is finished, a mail
+## is sent to the user (the email needs to be configured in the
+## script) and the simulation files are archived.
 ##
 ## Keywords: Pleiades; launch simulation; format results; save files
 ##
