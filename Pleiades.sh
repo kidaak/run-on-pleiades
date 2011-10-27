@@ -207,6 +207,8 @@ if [ -s $TIMELIMITSCRIPT ]; then
     echo -e "The simulation files are stored in your Pleiades home directory at the following path:\n$SIMDIR_PATH/$BASE_NAME\n" >> $MAIL_FILE
     echo -e "You can have a look at the Pleiades output file below:\n" >> $MAIL_FILE
     cat $SIM_DIR/../$BASE_NAME-qsub_o$CURRENT_JOB.txt >> $MAIL_FILE
+	cat $SIM_DIR/../$BASE_NAME-qsub_e$CURRENT_JOB.txt >> $MAIL_FILE
+	cat $SIM_DIR/../$BASE_NAME-out.txt >> $MAIL_FILE
     mail -s "[Pleiades] Job $CURRENT_JOB finished properly" -a $SIM_DIR/../$BASE_NAME-qsub_o$CURRENT_JOB.txt "$MAIL_ADR" < $MAIL_FILE
 else
     echo "Your job $CURRENT_JOB has failed on Pleiades (time limit reached)." > $MAIL_FILE
